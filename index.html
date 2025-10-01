@@ -4,26 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Interactive Quiz</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
   <div class="container" role="main">
     <header>
       <div>
-        <h1>General Knowledge Quiz</h1>
-        <div class="meta">5 questions — multiple choice — accessible</div>
+        <h1>Dota 2 Personality Test</h1>
       </div>
-      <div class="small">Timer: <span id="timer">--:--</span></div>
     </header>
 
-    <section class="quiz-card" aria-live="polite">
-      <div id="quiz-area">
+    <section class="q-card" aria-live="polite">
+      <div id="q-area">
         <!-- Question area rendered by JS -->
       </div>
 
       <footer>
-        <div class="small">Question <span id="current">0</span>/<span id="total">0</span></div>
-        <div class="progress" aria-hidden="true"><i id="progress-bar"></i></div>
         <div style="display:flex;gap:8px;align-items:center">
           <button id="prevBtn" aria-label="Previous question">Prev</button>
           <button id="nextBtn" aria-label="Next question">Next</button>
@@ -36,11 +32,10 @@
 
     <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
       <button id="restart">Restart</button>
-      <button id="download">Download HTML</button>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="scripts/script.js"></script>
 </body>
 </html>
 

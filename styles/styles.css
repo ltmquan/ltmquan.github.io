@@ -48,7 +48,7 @@ h1 {
     font-size: 13px
 }
 
-.quiz-card {
+.q-card {
     background: var(--glass);
     padding: 18px;
     border-radius: 10px
@@ -84,6 +84,32 @@ h1 {
 
 .choice:focus-within {
     outline: 2px solid rgba(124, 58, 237, 0.18)
+}
+
+#dropdown {
+    position: relative;
+    color: #e6eef6;
+    width: 100%;
+}
+
+.options-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #2c2c3c;
+    border: 1px solid #555;
+    border-radius: 4px;
+    z-index: 100;
+}
+
+.options-container label {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    cursor: pointer;
 }
 
 footer {
