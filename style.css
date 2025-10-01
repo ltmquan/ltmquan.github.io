@@ -1,0 +1,142 @@
+:root {
+    --bg: #0f172a;
+    --card: #0b1220;
+    --accent: #7c3aed;
+    --muted: #9aa4b2;
+    --glass: rgba(255, 255, 255, 0.03)
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #041126 0%, #071430 100%);
+    color: #e6eef6;
+    padding: 24px
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: linear-gradient(180deg, var(--card), #081022);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6)
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0
+}
+
+.meta {
+    color: var(--muted);
+    font-size: 13px
+}
+
+.quiz-card {
+    background: var(--glass);
+    padding: 18px;
+    border-radius: 10px
+}
+
+.question {
+    font-size: 18px;
+    margin: 0 0 12px
+}
+
+.choices {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px
+}
+
+.choice {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.choice input {
+    accent-color: var(--accent)
+}
+
+.choice:focus-within {
+    outline: 2px solid rgba(124, 58, 237, 0.18)
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px
+}
+
+button {
+    background: linear-gradient(90deg, var(--accent), #5b21b6);
+    border: none;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+button[disabled] {
+    opacity: 0.45;
+    cursor: not-allowed
+}
+
+.progress {
+    height: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 999px;
+    overflow: hidden;
+    flex: 1;
+    margin: 0 16px
+}
+
+.progress>i {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #34d399, #60a5fa);
+    width: 0%
+}
+
+.small {
+    font-size: 13px;
+    color: var(--muted)
+}
+
+.result {
+    padding: 18px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+    margin-top: 14px
+}
+
+@media (max-width:600px) {
+    .container {
+        padding: 16px
+    }
+}
